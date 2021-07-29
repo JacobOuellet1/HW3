@@ -1,0 +1,78 @@
+<!--
+File: education.html
+GUI Assignment: Homework 3
+Jacob Ouellet, UMass Lowell Computer Science, jacob_ouellet@student.uml.edu
+Copyright (c) 2021 by Jacob Ouellet. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by Jacob Ouellet on July 29, 2021 at 4:12 PM
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+        <h1>Multiplication Table</h1>
+        <p>The range between a starting index and an ending index must be 200 numbers or less.</p> <!-- table instructions-->
+        <p>The index values must be integers between -9999 and 9999.</p> <!-- table instructions-->
+    </header>
+    <form id="input_form">  <!-- input form-->
+        <div>
+            <label for="rowstart">Row Start Index:</label>  <!-- get row start index-->
+            <input type="text" id="rowstart" name="rowstart">
+        </div>
+        <div>
+            <label for="rowend">Row End Index:</label> <!-- get row end index-->
+            <input type="text" id="rowend" name="rowend">
+        </div>
+        <div>
+            <label for="columnstart">Column Start Index:</label>    <!-- get column start index-->
+            <input type="text" id="columnstart" name="columnstart"> 
+        </div>
+        <div>
+            <label for="columnend">Column End Index:</label> <!-- get column end index-->
+            <input type="text" id="columnend" name="columnend">            
+        </div>
+        <div>
+            <p id="errormsg"></p>   <!-- empty p element to display error messages-->
+        </div>
+        <div>
+            <button type="button" id="btn" onclick="process_table()">Submit!</button>   <!-- button to submit form info and build table-->
+        </div>
+        
+    </form>
+    <div id="container">
+        <table id="multTable">  <!-- starting empty table-->
+            <tr>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </table>
+    </div>
+    <script src="js/script.js"></script>    <!-- javascript reference-->
+  </body>
+</html>
